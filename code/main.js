@@ -17,3 +17,7 @@ function bgChange() {
     const rndCol = 'rgb('+ random(255) + ',' + random(255) + ',' + random(255) +')';
     return rndCol;
 }
+
+/*Reference the divs created and store them in a variable*/
+
+const divs = document.querySelector('div');
