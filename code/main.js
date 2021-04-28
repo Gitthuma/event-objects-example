@@ -1,6 +1,6 @@
 /*Create 16 <div> elements using JavaScript.*/
 
-for (i = 1; 1<= 16; i++) {
+for(let i = 1; i <= 16; i++) {
     const myDiv = document.createElement('div');
     document.body.appendChild(myDiv);
 }
@@ -14,10 +14,18 @@ function random(number) {
 /*Create a function to generate random background color*/
 
 function bgChange() {
-    const rndCol = 'rgb('+ random(255) + ',' + random(255) + ',' + random(255) +')';
+    const rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
     return rndCol;
 }
 
 /*Reference the divs created and store them in a variable*/
 
-const divs = document.querySelector('div');
+const divs = document.querySelectorAll('div');
+
+/*Create code to apply random background color to targeted div*/
+
+for(let i = 0; i < divs.length; i++) {
+    divs[i].onclick = function(e) {
+        e.target.style.backgroundColor = bgChange();
+    }
+}
