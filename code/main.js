@@ -10,3 +10,10 @@ for (i = 1; 1<= 16; i++) {
 function random(number) {
     return Math.floor(Math.random() * number);
 }
+
+/*Create a function to generate random background color*/
+
+function bgChange() {
+    const rndCol = 'rgb('+ random(255) + ',' + random(255) + ',' + random(255) +')';
+    return rndCol;
+}
